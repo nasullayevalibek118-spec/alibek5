@@ -1,0 +1,26 @@
+{
+  "name": "80talik-bloc5",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "chain": "npx ganache --server.host 127.0.0.1 --server.port 8546 --chain.chainId 1337 --wallet.mnemonic \"test test test test test test test test test test test junk\" --wallet.totalAccounts 10",
+    "deploy": "node scripts/deploy.js",
+    "web": "node server.js",
+    "test": "echo \"No tests configured yet\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-ethers": "^4.0.7",
+    "ganache": "^7.9.2",
+    "hardhat": "^3.3.0",
+    "solc": "^0.8.34"
+  },
+  "dependencies": {
+    "ethers": "^6.16.0",
+    "express": "^5.2.1"
+  }
+}

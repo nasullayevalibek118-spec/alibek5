@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web3 Blockchain Demo</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">Browser + MetaMask + Smart Contract</p>
+          <h1>Web3 Blockchain Demo</h1>
+          <p class="lead">
+            Genesis blok, Proof-of-Work mining, chain validation va tamper tekshiruvi
+            brauzerning o‘zida ishlaydi.
+          </p>
+        </div>
+        <div class="hero-card">
+          <div class="status-line">
+            <span>Wallet</span>
+            <strong id="walletStatus">Ulanmagan</strong>
+          </div>
+          <div class="status-line">
+            <span>Contract</span>
+            <strong id="contractStatus">Yuklanmoqda...</strong>
+          </div>
+          <div class="status-line">
+            <span>On-chain valid</span>
+            <strong id="chainStatus">Tekshirilmagan</strong>
+          </div>
+          <button id="connectButton" class="primary-button">MetaMask ulash</button>
+        </div>
+      </header>
+
+      <main class="grid">
+        <section class="panel">
+          <h2>Yangi blok qo‘shish</h2>
+          <label for="blockData">Blok ma’lumoti</label>
+          <textarea id="blockData" rows="5" placeholder='Masalan: {"from":"Ali","to":"Vali","amount":10}'></textarea>
+          <div class="actions">
+            <button id="mineButton" class="primary-button">Mine va qo‘shish</button>
+            <button id="validateButton" class="secondary-button">Zanjirni tekshirish</button>
+            <button id="tamperButton" class="ghost-button">Tamper simulyatsiyasi</button>
+          </div>
+          <div class="meta-box">
+            <p id="networkInfo">Tarmoq ma’lumoti yuklanmoqda...</p>
+            <p id="miningStatus">Mining hali boshlanmadi.</p>
+            <p id="tamperStatus">Tamper tekshiruvi hali ishlamadi.</p>
+          </div>
+        </section>
+
+        <section class="panel">
+          <h2>Bloklar ro‘yxati</h2>
+          <div id="blocksContainer" class="blocks"></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/ethers@6.16.0/dist/ethers.umd.min.js"></script>
+    <script src="./app.js"></script>
+  </body>
+  </html>
